@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to left, rgb(194, 194, 194), rgb(191, 191, 253) );
+}
+
+select{
+    width: 10vw;
+    height: 6vh;
+    border-radius: 0.3vw;
+    background-color: white;
+    border: 0.01px solid black;
+}
+
+input[type = 'date']{
+    width: 12vw;
+    height: 6vh;
+    border-radius: 0.3vw;
+    border: 0.5px solid black;
+}
+
+th, 
+td{
+    border: 1px solid black;
+}
+th{
+    background-color: rgb(88, 88, 88);
+    color: white;
+}
+td{
+    background-color: rgba(240, 248, 255, 0.329);
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+body > div:first-child{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+table{
+    margin-top: 5vh;
+    font-size: 20px;
+}
+
+input[type='button']{
+    width: 12vw;
+    height: 6vh;
+    border-radius: 0.4vw;
+    cursor: pointer;
+    font-size: 20px;
+}
