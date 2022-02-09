@@ -22,7 +22,17 @@ $(document).ready(() => {
     function getAjax() {
         const startDate = $('#start-date').val().replaceAll('-', '');
         const endDate = $('#end-date').val().replaceAll('-', '');
-        if (!endDate || !startDate) return;
+        if (!endDate || !startDate){
+            const resposta = !endDate && !startDate ? "As duas datas estão faltando" : !startDate ? "Data inicial faltando" : "Data Final Faltando";
+            $('#obs').text(resposta);
+            return;
+        }else if(Date.parse($('#start-date').val()) > Date.now() || Date.parse($('#end-date').val()) > Date.now()){
+            $('#obs').text("A API não prevê o futuro");
+            return;
+        }else if(endDate < startDate){
+            $('#obs').text("Data final antes da inicial, isso faz sentido?");
+            return;
+        }
 
         $.ajax({ url: `https://economia.awesomeapi.com.br/${$('select').val()}/${10 ** 20}?start_date=${startDate}&end_date=${endDate}`, context: $('table:last-child') })
         .done(function (data) {
@@ -44,6 +54,7 @@ $(document).ready(() => {
                     $('table:last-child > tbody').append('<tr></tr>');
                     item.forEach(element => $('table:last-child > tbody > tr:last-child').append(`<td>${element}</td>`));
                 }
+                $('#obs').text('');
             });
     }
 });

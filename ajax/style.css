@@ -49,6 +49,16 @@ body > div:first-child{
     align-items: center;
     gap: 5vh;
 }
+
+body > div:first-child > div{
+    text-align: center;
+}
+ 
+p#obs{
+    color: red;
+    font-size: larger;
+}
+
 table{
     margin-top: 5vh;
     font-size: 20px;
