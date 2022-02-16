@@ -1,0 +1,59 @@
+a:hover{
+    background-color: red;
+}
+
+.ui-tabs-active,
+.ui-state-active{
+    background-color: red !important;
+    border-color: red !important;
+}
+
+#duration1,
+#duration2,
+#duration3,
+#duration4,
+#duration5
+{
+    height: 10vh;
+}
+
+/* *{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    width: 500px;
+    height: 600px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+}
+
+section > ul{
+    background-color: rgb(0, 255, 255);
+    list-style: none;
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+
+section > ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-right: 0.5vw;
+    width: 10vw;
+    height: 5vh;
+    background-color: #ff0000;
+    border: 1px solid black;
+} */
