@@ -10,6 +10,8 @@ $(function () {
                 .append(`<div id="title${i + 1}"></div>`)
                 .append('<h3>Duração</h3>')
                 .append(`<div id="duration${i + 1}"></div>`)
+                .append(`<h3>ID Video</h3>`)
+                .append(`<div id="id_video${i + 1}"></div>`)
         }
     })();
 
@@ -44,9 +46,11 @@ function onPlayerReady(event) {
         if(player.getCurrentTime() != 0){
             const id = event.target.h.id[5];
             const metas = player.getVideoData();
+            console.log(metas);
             $(`#author${id}`).text(metas.author);
             $(`#title${id}`).text(metas.title);
             $(`#duration${id}`).text(player.getDuration() + ' Segundos');
+            $(`#id_video${id}`).text(metas.video_id);
             clearInterval(interval);
         }
     }, 500);
